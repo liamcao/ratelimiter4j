@@ -5,3 +5,7 @@ configs:
     limit: 10
   - api: /walet
     limit: 10
+- appId: app2
+  limits:
+    - api: /2/2
+    - limit: 20
