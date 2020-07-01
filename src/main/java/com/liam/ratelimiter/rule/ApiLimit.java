@@ -20,16 +20,16 @@ public class ApiLimit {
         this.unit = unit;
     }
 
-    public int getLimit() {
-        return 0;
-    }
-
     public String getApi() {
-        return null;
+        return api;
     }
 
     public void setApi(String api) {
         this.api = api;
+    }
+
+    public int getLimit() {
+        return limit;
     }
 
     public void setLimit(int limit) {
