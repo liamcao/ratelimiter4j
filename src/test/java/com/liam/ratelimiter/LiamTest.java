@@ -65,8 +65,12 @@ public class LiamTest {
             JsonNode node1 = objectMapper.valueToTree(apiLimit);
             System.out.println(node1);
 
+
             JsonNode node = objectMapper.readTree(carJson);
             System.out.println(node);
+
+            JsonNode at = node.at("/owners");
+            System.out.println("at : " + at.isArray() + at.isTextual() + at);
 
             JsonNode jsonNode = objectMapper.readValue(carJson, JsonNode.class);
             System.out.println(jsonNode);
