@@ -46,6 +46,8 @@ public class LiamRateLimiterV2 {
             }
         }
 
+        //ziji:感觉上面应该不对，因为上面当get和判null不是原子操作。应该用computeIfAbsent(algKey，k -> new FixTimeWinRateLimitAlg(apiLimit.getLimit()));
+
         // 判断是否限流
         return neededAlg.tryAcquire();
     }
